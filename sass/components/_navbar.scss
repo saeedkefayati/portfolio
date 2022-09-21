@@ -22,7 +22,7 @@ header {
 	justify-content: center;
 	background-color: transparent;
 	padding: $spacer * 1.5 $spacer * 3;
-	border: 1px solid $primary;
+	border: 1px solid $light;
 	border-radius: $spacer;
 	@media screen and (min-width: $md) {
 		display: none;

@@ -1,7 +1,113 @@
+.w-100 {
+	width: 100%;
+}
+.h-100 {
+	height: 100%;
+}
+.text-center {
+	text-align: center;
+}
 .objec-fit-cover {
 	object-fit: cover;
 }
 .img-fluid {
 	height: auto;
 	max-width: 100%;
+}
+.line-clamp-none {
+	-webkit-line-clamp: unset;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+.mt-auto {
+	margin-top: auto;
+}
+.mx-auto {
+	margin-inline: auto;
+}
+.my-auto {
+	margin-block: auto;
+}
+@for $i from 1 through 6 {
+	.line-clamp-#{$i} {
+		@include utility-numerical('line-clamp') {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: #{$i};
+		}
+	}
+}
+@for $i from 0 through 9 {
+	.m-#{$i} {
+		@include utility-numerical('margin') {
+			margin: #{$spacer * $i * 2};
+		}
+	}
+	.mx-#{$i} {
+		@include utility-numerical('margin') {
+			margin-inline: #{$spacer * $i * 2};
+		}
+	}
+	.my-#{$i} {
+		@include utility-numerical('margin') {
+			margin-block: #{$spacer * $i * 2};
+		}
+	}
+	.mt-#{$i} {
+		@include utility-numerical('margin') {
+			margin-top: #{$spacer * $i * 2};
+		}
+	}
+	.mr-#{$i} {
+		@include utility-numerical('margin') {
+			margin-right: #{$spacer * $i * 2};
+		}
+	}
+	.mb-#{$i} {
+		@include utility-numerical('margin') {
+			margin-bottom: #{$spacer * $i * 2};
+		}
+	}
+	.ml-#{$i} {
+		@include utility-numerical('margin') {
+			margin-left: #{$spacer * $i * 2};
+		}
+	}
+	.p-#{$i} {
+		@include utility-numerical('padding') {
+			padding: #{$spacer * $i * 2};
+		}
+	}
+	.px-#{$i} {
+		@include utility-numerical('padding') {
+			padding-inline: #{$spacer * $i * 2};
+		}
+	}
+	.py-#{$i} {
+		@include utility-numerical('padding') {
+			padding-block: #{$spacer * $i * 2};
+		}
+	}
+	.pt-#{$i} {
+		@include utility-numerical('padding') {
+			padding-top: #{$spacer * $i * 2};
+		}
+	}
+	.pr-#{$i} {
+		@include utility-numerical('padding') {
+			padding-right: #{$spacer * $i * 2};
+		}
+	}
+	.pl-#{$i} {
+		@include utility-numerical('padding') {
+			padding-left: #{$spacer * $i * 2};
+		}
+	}
+	.pb-#{$i} {
+		@include utility-numerical('padding') {
+			padding-bottom: #{$spacer * $i * 2};
+		}
+	}
 }

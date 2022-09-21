@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 html {
 	@include rtl(font-family, $font-family-ltr, $font-family-rtl);
 }
@@ -15,5 +17,5 @@ p {
 	margin: 0 0 $spacer * 4;
 }
 small {
-	font-size: $font-size-base * 3.5/4;
+	font-size: math.div($font-size-base * 3.5, 4);
 }

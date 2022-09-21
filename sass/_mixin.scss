@@ -5,6 +5,18 @@
 		#{$property}: $rtl-value;
 	}
 }
+@mixin container($padding-x: $spacer * 4) {
+	flex-basis: 100%;
+	padding-right: $padding-x;
+	padding-left: $padding-x;
+	margin-right: auto;
+	margin-left: auto;
+}
+// @mixin media($args...) {
+// 	@media screen and (max-width:#{$args}) {
+// 		@content;
+// 	}
+// }
 @function tint-color($color, $weight) {
 	@return mix($white, $color, $weight);
 }

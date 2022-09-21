@@ -1,0 +1,13 @@
+.collapse {
+	flex: 1 1 100%;
+	&:not(.active) {
+		display: none;
+	}
+	&.active {
+		display: inherit;
+	}
+	@media screen and (min-width: $md) {
+		display: flex !important;
+		flex: 0 1 auto;
+	}
+}

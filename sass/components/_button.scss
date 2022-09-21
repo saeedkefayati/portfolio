@@ -1,0 +1,35 @@
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
+button:not(:disabled) {
+	cursor: pointer;
+}
+.btn {
+	padding: $spacer * 1.5 $spacer * 3;
+	font-size: $font-size-base;
+	font-variation-settings: 'wght' $font-weight-regular;
+	background-color: transparent;
+	color: $dark;
+	border: 1px solid;
+	border-radius: $spacer * 1.5;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	&:focus,
+	&:focus-visible {
+		outline: 0;
+	}
+	&:disabled {
+		pointer-events: none;
+		opacity: 0.6;
+	}
+}
+@include button-colors(primary, $primary);
+@include button-colors(secondary, $secondary);
+@include button-colors(success, $success);
+@include button-colors(danger, $danger);
+@include button-colors(warning, $warning, true);
+@include button-colors(info, $info, true);
+@include button-colors(light, $light, true);
+@include button-colors(dark, $dark);

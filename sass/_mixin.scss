@@ -1,0 +1,32 @@
+@mixin rtl($property, $ltr-value, $rtl-value) {
+	#{$property}: $ltr-value;
+
+	&[dir='rtl'] {
+		#{$property}: $rtl-value;
+	}
+}
+@mixin button-colors($name, $color, $dark: false) {
+	@for $i from 0 to length($name) {
+		.btn-#{$name} {
+			background-color: $color;
+			border-color: $color;
+			&:hover {
+				background-color: darken($color, 7%);
+				border-color: darken($color, 9%);
+			}
+			&:focus {
+				background-color: darken($color, 9%);
+				border-color: darken($color, 9%);
+				box-shadow: 0 0 0 $spacer * 0.875 lighten($color, 25%);
+			}
+			&:active {
+				background-color: darken($color, 12%);
+			}
+			@if $dark {
+				color: darken($color, 90%);
+			} @else {
+				color: lighten($color, 90%);
+			}
+		}
+	}
+}

@@ -49,3 +49,13 @@
 		}
 	}
 }
+@mixin utility-numerical($args...) {
+	@for $i from 0 to length($args) {
+		@content;
+	}
+}
+@mixin utility($name, $attr) {
+	.#{$name}-#{$attr} {
+		#{$name}: #{$attr};
+	}
+}

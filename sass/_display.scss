@@ -1,0 +1,37 @@
+.grid {
+	display: grid;
+}
+.flex {
+	display: flex;
+}
+.block {
+	display: block;
+}
+.none {
+	display: none;
+}
+.inline-flex {
+	display: inline-flex;
+}
+.inline-block {
+	display: inline-block;
+}
+@for $i from 1 through 6 {
+	.gap-#{$i} {
+		@include utility-numerical('gap') {
+			gap: #{$spacer * $i};
+		}
+	}
+}
+@include utility('align-items', 'flex-start');
+@include utility('align-items', 'center');
+@include utility('align-items', 'flex-end');
+@include utility('align-items', 'baseline');
+@include utility('align-items', 'stretch');
+@include utility('justify-content', 'flex-start');
+@include utility('justify-content', 'center');
+@include utility('justify-content', 'flex-end');
+@include utility('justify-content', 'space-between');
+@include utility('justify-content', 'space-around');
+@include utility('justify-content', 'space-evenly');
+@include utility('justify-content', 'stretch');

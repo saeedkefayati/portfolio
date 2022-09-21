@@ -70,12 +70,12 @@ $font-weight-black: 900;
 $font-weight-base: $font-weight-regular;
 $line-height-base: 1.5;
 
-$h1-font-size: $font-size-base * 2.5/1.5;
-$h2-font-size: $font-size-base * 2/1.5;
-$h3-font-size: $font-size-base * 1.75/1.5;
-$h4-font-size: $font-size-base * 1.5/1.5;
-$h5-font-size: $font-size-base * 1.25/1.5;
-$h6-font-size: $font-size-base;
+$h1-font-size: calc($font-size-base * 2.5 / 1.5);
+$h2-font-size: calc($font-size-base * 2 / 1.5);
+$h3-font-size: calc($font-size-base * 1.75 / 1.5);
+$h4-font-size: calc($font-size-base * 1.5 / 1.5);
+$h5-font-size: calc($font-size-base * 1.25 / 1.5);
+$h6-font-size: calc($font-size-base);
 $small-font-size: 0.875em;
 $sub-sup-font-size: 0.75em;
 
@@ -123,5 +123,3 @@ $variable: (
 		'h6': $h6-font-size,
 	),
 );
-
-@warn map.get($variable, 'color', 'white');

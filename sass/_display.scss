@@ -1,37 +1,49 @@
-.grid {
+.d-grid {
 	display: grid;
 }
-.flex {
+.d-flex {
 	display: flex;
 }
-.block {
+.d-block {
 	display: block;
 }
-.none {
+.d-none {
 	display: none;
 }
-.inline-flex {
+.d-inline-flex {
 	display: inline-flex;
 }
-.inline-block {
+.d-inline-block {
 	display: inline-block;
 }
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
 	.gap-#{$i} {
 		@include utility-numerical('gap') {
 			gap: #{$spacer * $i};
 		}
 	}
 }
-@include utility('align-items', 'flex-start');
+@include utility('align-items', 'start');
 @include utility('align-items', 'center');
-@include utility('align-items', 'flex-end');
+@include utility('align-items', 'end');
 @include utility('align-items', 'baseline');
 @include utility('align-items', 'stretch');
-@include utility('justify-content', 'flex-start');
+@include utility('align-self', 'start');
+@include utility('align-self', 'center');
+@include utility('align-self', 'end');
+@include utility('align-self', 'baseline');
+@include utility('align-self', 'stretch');
+@include utility('justify-content', 'start');
 @include utility('justify-content', 'center');
-@include utility('justify-content', 'flex-end');
+@include utility('justify-content', 'end');
 @include utility('justify-content', 'space-between');
 @include utility('justify-content', 'space-around');
 @include utility('justify-content', 'space-evenly');
 @include utility('justify-content', 'stretch');
+@include utility('justify-self', 'start');
+@include utility('justify-self', 'center');
+@include utility('justify-self', 'end');
+@include utility('justify-self', 'space-between');
+@include utility('justify-self', 'space-around');
+@include utility('justify-self', 'space-evenly');
+@include utility('justify-self', 'stretch');

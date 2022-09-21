@@ -2,7 +2,8 @@
 	display: grid;
 	position: relative;
 	word-wrap: break-word;
-	border: 1px solid rgba(transparent, 0.125);
+	//border: 1px solid rgba(transparent, 0.125);
+	box-shadow: 0 0 0 $spacer * 0.25 rgba(shade-color($white, 15%), 0.5);
 	border-radius: $spacer * 1.5;
 }
 .card-img-top {

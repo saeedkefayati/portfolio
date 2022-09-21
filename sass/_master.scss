@@ -1,6 +1,3 @@
-html {
-	@include rtl(font-family, $font-family-ltr, $font-family-rtl);
-}
 body {
 	font-size: $font-size-base;
 	font-variation-settings: 'wght' $font-weight-base;
@@ -8,3 +5,32 @@ body {
 	color: $dark;
 	background-color: $white;
 }
+.intro {
+	padding: 2rem 0 0;
+	background-image: linear-gradient(135deg, $primary 55%, transparent 55%), linear-gradient($white, $white 0.5rem, $primary 0.5rem, $primary);
+	background-size: 100%, 100% 1rem;
+	color: $white;
+	img {
+		display: flex;
+	}
+}
+// .swiper {
+// 	width: 100%;
+// }
+footer {
+	color: $white;
+	background-color: $gray-700;
+	a {
+		color: $white;
+	}
+}
+//custom swiper
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+	left: $spacer * 1.5;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+	right: $spacer * 1.5;
+}
+//custom swiper

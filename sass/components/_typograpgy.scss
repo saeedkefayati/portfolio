@@ -1,0 +1,16 @@
+@for $i from 1 through 6 {
+	h#{$i},
+	.h#{$i} {
+		margin: 0 0 $spacer * 4;
+		font-size: calc(map-get($variable, 'typography', h#{$i}) + 1vw);
+		font-weight: inherit;
+		font-variation-settings: 'wght' $font-weight-semibold;
+	}
+}
+p {
+	font-size: $font-size-base;
+	margin: 0 0 $spacer * 4;
+}
+small {
+	font-size: $font-size-base * 3.5/4;
+}

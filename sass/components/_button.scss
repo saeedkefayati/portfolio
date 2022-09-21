@@ -7,6 +7,7 @@ button:not(:disabled) {
 .btn {
 	padding: $spacer * 1.5 $spacer * 3;
 	font-size: $font-size-base;
+	line-height: inherit;
 	font-variation-settings: 'wght' $font-weight-regular;
 	background-color: transparent;
 	color: $dark;

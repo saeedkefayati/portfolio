@@ -46,3 +46,6 @@
 	--media-xl: #{$xl};
 	--media-xxl: #{$xxl};
 }
+html {
+	scroll-behavior: smooth;
+}

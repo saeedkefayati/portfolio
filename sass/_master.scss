@@ -1,0 +1,10 @@
+html {
+	@include rtl(font-family, $font-family-ltr, $font-family-rtl);
+}
+body {
+	font-size: $font-size-base;
+	font-variation-settings: 'wght' $font-weight-base;
+	line-height: $line-height-base;
+	color: $dark;
+	background-color: $light;
+}

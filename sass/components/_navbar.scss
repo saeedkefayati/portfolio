@@ -1,0 +1,43 @@
+header {
+	position: sticky;
+	top: 0;
+}
+.navbar {
+	background-color: $primary;
+	padding: $spacer * 2 $spacer * 3;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	a {
+		text-decoration: none;
+	}
+}
+.navbar-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	padding: $spacer * 1.5 $spacer * 3;
+	border: 1px solid $dark;
+	border-radius: $spacer;
+	@media screen and (min-width: $md) {
+		display: none;
+	}
+}
+.navbar-collapse {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap: $spacer * 8;
+	margin: $spacer * 2 0;
+	@media screen and (max-width: $md) {
+		flex-direction: column;
+		gap: $spacer * 6;
+		margin: $spacer * 4 0 0;
+	}
+}
+.navbar-link {
+	display: inherit;
+}
